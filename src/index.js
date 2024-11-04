@@ -1,5 +1,17 @@
+const {gets, print} = require('../src/utils/utils');
 let nome = ["David", "Gabriel", "Matheus"]
 let xp = [2000, 10000, 7000]
+
+console.log("Quantos novos herois voce quer adicionar?")
+let qtd = parseInt(gets());
+
+for(let i = 0; i < qtd; i++){
+    let contador = i+1
+    console.log("Qual o nome do " + contador + " Heroi?")
+    nome.push(gets())
+    console.log("E qual o nivel de XP desse heroi?")
+    xp.push(gets())
+}
 
 function decisao (x, min, max){
     if (xp[x] >= min && xp[x] <= max){
